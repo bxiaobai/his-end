@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureChemotherapyDailySignsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureChemotherapyDailySigns">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="chemotherapyRecordId" column="chemotherapy_record_id" jdbcType="BIGINT"/>
+            <result property="temperature" column="temperature" jdbcType="FLOAT"/>
+            <result property="bloodPressure" column="blood_pressure" jdbcType="VARCHAR"/>
+            <result property="oxygenSaturation" column="oxygen_saturation" jdbcType="FLOAT"/>
+            <result property="bloodSugar" column="blood_sugar" jdbcType="FLOAT"/>
+            <result property="weight" column="weight" jdbcType="FLOAT"/>
+            <result property="height" column="height" jdbcType="FLOAT"/>
+            <result property="bmi" column="bmi" jdbcType="FLOAT"/>
+            <result property="examinationResult" column="examination_result" jdbcType="VARCHAR"/>
+            <result property="treatmentStartTime" column="treatment_start_time" jdbcType="TIMESTAMP"/>
+            <result property="treatmentEndTime" column="treatment_end_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,chemotherapy_record_id,temperature,
+        blood_pressure,oxygen_saturation,blood_sugar,
+        weight,height,bmi,
+        examination_result,treatment_start_time,treatment_end_time
+    </sql>
+</mapper>

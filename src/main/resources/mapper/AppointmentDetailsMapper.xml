@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.AppointmentDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.AppointmentDetails">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="appointee" column="appointee" jdbcType="VARCHAR"/>
+            <result property="cardNumber" column="card_number" jdbcType="VARCHAR"/>
+            <result property="appointDate" column="appoint_date" jdbcType="DATE"/>
+            <result property="seatId" column="seat_id" jdbcType="BIGINT"/>
+            <result property="seatNumber" column="seat_number" jdbcType="VARCHAR"/>
+            <result property="appointTime" column="appoint_time" jdbcType="TIME"/>
+            <result property="patientType" column="patient_type" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="sourceType" column="source_type" jdbcType="VARCHAR"/>
+            <result property="operatorId" column="operator_id" jdbcType="BIGINT"/>
+            <result property="operatorName" column="operator_name" jdbcType="VARCHAR"/>
+            <result property="infusionId" column="infusion_id" jdbcType="BIGINT"/>
+            <result property="infusionName" column="infusion_name" jdbcType="VARCHAR"/>
+            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+            <result property="sourceId" column="source_id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="queueNumber" column="queue_number" jdbcType="INTEGER"/>
+            <result property="serialNumber" column="serial_number" jdbcType="BIGINT"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,appointee,card_number,
+        appoint_date,seat_id,seat_number,
+        appoint_time,patient_type,create_time,
+        update_time,source_type,operator_id,
+        operator_name,infusion_id,infusion_name,
+        phone_number,source_id,status,
+        queue_number,serial_number,is_delete
+    </sql>
+</mapper>

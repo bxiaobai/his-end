@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CurePostTreatmentInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CurePostTreatmentInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="medicalRecordId" column="medical_record_id" jdbcType="BIGINT"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="chemotherapyAssessment" column="chemotherapy_assessment" jdbcType="VARCHAR"/>
+            <result property="treatmentDuration" column="treatment_duration" jdbcType="TIME"/>
+            <result property="creationDate" column="creation_date" jdbcType="TIMESTAMP"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,medical_record_id,end_time,
+        chemotherapy_assessment,treatment_duration,creation_date,
+        creator
+    </sql>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.MedPatientsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.MedPatients">
+            <id property="patientId" column="patient_id" jdbcType="BIGINT"/>
+            <result property="patientName" column="patient_name" jdbcType="VARCHAR"/>
+            <result property="medicalNumber" column="medical_number" jdbcType="VARCHAR"/>
+            <result property="age" column="age" jdbcType="INTEGER"/>
+            <result property="birth" column="birth" jdbcType="DATE"/>
+            <result property="gender" column="gender" jdbcType="TINYINT"/>
+            <result property="maritalStatus" column="marital_status" jdbcType="TINYINT"/>
+            <result property="phoneNumber" column="phone_number" jdbcType="VARCHAR"/>
+            <result property="email" column="email" jdbcType="VARCHAR"/>
+            <result property="address" column="address" jdbcType="VARCHAR"/>
+            <result property="emergencyContactName" column="emergency_contact_name" jdbcType="VARCHAR"/>
+            <result property="emergencyContactPhone" column="emergency_contact_phone" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        patient_id,patient_name,medical_number,
+        age,birth,gender,
+        marital_status,phone_number,email,
+        address,emergency_contact_name,emergency_contact_phone,
+        create_time,update_time
+    </sql>
+</mapper>

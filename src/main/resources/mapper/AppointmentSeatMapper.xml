@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.AppointmentSeatMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.AppointmentSeat">
+            <id property="seatId" column="seat_id" jdbcType="BIGINT"/>
+            <result property="seatNumber" column="seat_number" jdbcType="VARCHAR"/>
+            <result property="transfusionId" column="transfusion_id" jdbcType="BIGINT"/>
+            <result property="medicalType" column="medical_type" jdbcType="CHAR"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        seat_id,seat_number,transfusion_id,
+        medical_type,status
+    </sql>
+</mapper>

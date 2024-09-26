@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureTreatmentPlanMedicineDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureTreatmentPlanMedicineDetails">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="detailId" column="detail_id" jdbcType="BIGINT"/>
+            <result property="medicineName" column="medicine_name" jdbcType="VARCHAR"/>
+            <result property="specification" column="specification" jdbcType="VARCHAR"/>
+            <result property="quantity" column="quantity" jdbcType="INTEGER"/>
+            <result property="prescriber" column="prescriber" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,detail_id,medicine_name,
+        specification,quantity,prescriber
+    </sql>
+</mapper>

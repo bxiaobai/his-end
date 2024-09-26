@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureFollowUpInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureFollowUpInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="medicalRecordId" column="medical_record_id" jdbcType="BIGINT"/>
+            <result property="patientId" column="patient_id" jdbcType="BIGINT"/>
+            <result property="followUpFrequency" column="follow_up_frequency" jdbcType="BIGINT"/>
+            <result property="followUpPeriod" column="follow_up_period" jdbcType="VARCHAR"/>
+            <result property="followUpMethod" column="follow_up_method" jdbcType="VARCHAR"/>
+            <result property="followUpTimes" column="follow_up_times" jdbcType="BIGINT"/>
+            <result property="remainingFollowUpTimes" column="remaining_follow_up_times" jdbcType="BIGINT"/>
+            <result property="nextFollowUpDate" column="next_follow_up_date" jdbcType="TIMESTAMP"/>
+            <result property="followUpStatus" column="follow_up_status" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,medical_record_id,patient_id,
+        follow_up_frequency,follow_up_period,follow_up_method,
+        follow_up_times,remaining_follow_up_times,next_follow_up_date,
+        follow_up_status
+    </sql>
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureChemoDailyMedicationMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureChemoDailyMedication">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="chemotherapyRecordId" column="chemotherapy_record_id" jdbcType="BIGINT"/>
+            <result property="medicationName" column="medication_name" jdbcType="VARCHAR"/>
+            <result property="specification" column="specification" jdbcType="VARCHAR"/>
+            <result property="quantity" column="quantity" jdbcType="BIGINT"/>
+            <result property="prescriber" column="prescriber" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,chemotherapy_record_id,medication_name,
+        specification,quantity,prescriber
+    </sql>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureTreatmentRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureTreatmentRecords">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="treatmentType" column="treatment_type" jdbcType="VARCHAR"/>
+            <result property="medicalOrderId" column="medical_order_id" jdbcType="BIGINT"/>
+            <result property="treatmentStatus" column="treatment_status" jdbcType="VARCHAR"/>
+            <result property="treatmentResult" column="treatment_result" jdbcType="VARCHAR"/>
+            <result property="creationDate" column="creation_date" jdbcType="TIMESTAMP"/>
+            <result property="patientId" column="patient_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,treatment_type,medical_order_id,
+        treatment_status,treatment_result,creation_date,
+        patient_id
+    </sql>
+</mapper>

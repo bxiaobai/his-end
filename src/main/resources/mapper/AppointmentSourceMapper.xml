@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.AppointmentSourceMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.AppointmentSource">
+            <id property="sourceId" column="source_id" jdbcType="BIGINT"/>
+            <result property="configDate" column="config_date" jdbcType="DATE"/>
+            <result property="startTime" column="start_time" jdbcType="TIME"/>
+            <result property="endTime" column="end_time" jdbcType="TIME"/>
+            <result property="sourceTotal" column="source_total" jdbcType="INTEGER"/>
+            <result property="remainingCount" column="remaining_count" jdbcType="INTEGER"/>
+            <result property="configId" column="config_id" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="CHAR"/>
+            <result property="standbyNumber" column="standby_number" jdbcType="INTEGER"/>
+            <result property="transfusionId" column="transfusion_id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        source_id,config_date,start_time,
+        end_time,source_total,remaining_count,
+        config_id,status,standby_number,
+        transfusion_id
+    </sql>
+</mapper>

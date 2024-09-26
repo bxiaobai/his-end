@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureFollowUpInfoDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureFollowUpInfoDetails">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="followUpInfoId" column="follow_up_info_id" jdbcType="BIGINT"/>
+            <result property="informationSendTime" column="information_send_time" jdbcType="TIMESTAMP"/>
+            <result property="sendMethod" column="send_method" jdbcType="VARCHAR"/>
+            <result property="sendStatus" column="send_status" jdbcType="VARCHAR"/>
+            <result property="followUpCompletionTime" column="follow_up_completion_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,follow_up_info_id,information_send_time,
+        send_method,send_status,follow_up_completion_time
+    </sql>
+</mapper>

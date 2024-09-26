@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureDiagnosisRecordsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureDiagnosisRecords">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="medicalRecordId" column="medical_record_id" jdbcType="BIGINT"/>
+            <result property="preliminaryDiagnosis" column="preliminary_diagnosis" jdbcType="VARCHAR"/>
+            <result property="prescription" column="prescription" jdbcType="VARCHAR"/>
+            <result property="prescriptionTime" column="prescription_time" jdbcType="TIMESTAMP"/>
+            <result property="followUpPlan" column="follow_up_plan" jdbcType="VARCHAR"/>
+            <result property="prescriptionRecord" column="prescription_record" jdbcType="VARCHAR"/>
+            <result property="treatmentPlan" column="treatment_plan" jdbcType="VARCHAR"/>
+            <result property="creationDate" column="creation_date" jdbcType="TIMESTAMP"/>
+            <result property="creator" column="creator" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,medical_record_id,preliminary_diagnosis,
+        prescription,prescription_time,follow_up_plan,
+        prescription_record,treatment_plan,creation_date,
+        creator
+    </sql>
+</mapper>

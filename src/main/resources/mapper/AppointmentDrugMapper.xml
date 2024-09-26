@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.AppointmentDrugMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.AppointmentDrug">
+            <id property="drugId" column="drug_id" jdbcType="BIGINT"/>
+            <result property="resId" column="res_id" jdbcType="BIGINT"/>
+            <result property="registerId" column="register_id" jdbcType="VARCHAR"/>
+            <result property="infusionApplyNos" column="infusion_apply_nos" jdbcType="VARCHAR"/>
+            <result property="djsj" column="djsj" jdbcType="VARCHAR"/>
+            <result property="createDoctor" column="create_doctor" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        drug_id,res_id,register_id,
+        infusion_apply_nos,djsj,create_doctor,
+        is_delete
+    </sql>
+</mapper>

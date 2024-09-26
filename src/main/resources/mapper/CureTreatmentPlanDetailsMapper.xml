@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.CureTreatmentPlanDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.CureTreatmentPlanDetails">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="medicalOrderId" column="medical_order_id" jdbcType="BIGINT"/>
+            <result property="firstUseTime" column="first_use_time" jdbcType="TIMESTAMP"/>
+            <result property="totalTimes" column="total_times" jdbcType="INTEGER"/>
+            <result property="usedTimes" column="used_times" jdbcType="INTEGER"/>
+            <result property="usageStatus" column="usage_status" jdbcType="VARCHAR"/>
+            <result property="patientId" column="patient_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,medical_order_id,first_use_time,
+        total_times,used_times,usage_status,
+        patient_id
+    </sql>
+</mapper>

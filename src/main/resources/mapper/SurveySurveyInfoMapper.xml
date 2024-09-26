@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.SurveySurveyInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.SurveySurveyInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="surveyName" column="survey_name" jdbcType="VARCHAR"/>
+            <result property="surveyDescription" column="survey_description" jdbcType="VARCHAR"/>
+            <result property="surveySort" column="survey_sort" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,survey_name,survey_description,
+        survey_sort
+    </sql>
+
+
+</mapper>

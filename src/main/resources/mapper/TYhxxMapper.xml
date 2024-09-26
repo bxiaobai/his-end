@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.his.master.mapper.TYhxxMapper">
+
+    <resultMap id="BaseResultMap" type="com.his.master.model.entity.TYhxx">
+            <result property="id" column="id" jdbcType="INTEGER"/>
+            <result property="yhdm" column="yhdm" jdbcType="VARCHAR"/>
+            <result property="yhkl" column="yhkl" jdbcType="VARCHAR"/>
+            <result property="yhxm" column="yhxm" jdbcType="VARCHAR"/>
+            <result property="yhlx" column="yhlx" jdbcType="INTEGER"/>
+            <result property="yhdm1" column="yhdm1" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,yhdm,yhkl,
+        yhxm,yhlx,yhdm1
+    </sql>
+</mapper>
